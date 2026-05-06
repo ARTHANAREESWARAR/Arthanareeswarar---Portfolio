@@ -41,12 +41,8 @@ function App() {
     const onResize = () => lenis.resize();
     window.addEventListener('resize', onResize);
 
-    // Sequence for boot transition
-    const timer = setTimeout(() => setIsBooting(false), 2600);
-
     return () => {
       window.removeEventListener('resize', onResize);
-      clearTimeout(timer);
       lenis.destroy();
       window.lenis = null;
     };

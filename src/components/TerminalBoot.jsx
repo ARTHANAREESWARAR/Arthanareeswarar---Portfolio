@@ -11,7 +11,7 @@ const logLines = [
   "BOOT_SEQUENCE_COMPLETE",
 ];
 
-export const TerminalBoot = () => {
+export const TerminalBoot = ({ onComplete }) => {
   const [loading, setLoading] = useState(true);
   const [currentLine, setCurrentLine] = useState(0);
 
@@ -22,9 +22,12 @@ export const TerminalBoot = () => {
       }, 150 + Math.random() * 200);
       return () => clearTimeout(timer);
     } else {
-      setTimeout(() => setLoading(false), 800);
+      setTimeout(() => {
+        setLoading(false);
+        if (onComplete) onComplete();
+      }, 800);
     }
-  }, [currentLine]);
+  }, [currentLine, onComplete]);
 
   return (
     <AnimatePresence>
