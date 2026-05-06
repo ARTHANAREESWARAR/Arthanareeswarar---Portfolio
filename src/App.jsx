@@ -17,25 +17,30 @@ function App() {
 
   useEffect(() => {
     // Initialize Lenis for "Apple-smooth" scrolling
-    const lenis = new Lenis({
-      duration: 1.2,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Expo Out
-      direction: 'vertical',
-      gestureDirection: 'vertical',
-      smoothWheel: true,
-      wheelMultiplier: 1.1,
-      smoothTouch: false,
-      touchMultiplier: 1.5,
-      infinite: false,
-    });
+    let lenis;
+    try {
+      lenis = new Lenis({
+        duration: 1.2,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Expo Out
+        direction: 'vertical',
+        gestureDirection: 'vertical',
+        smoothWheel: true,
+        wheelMultiplier: 1.1,
+        smoothTouch: false,
+        touchMultiplier: 1.5,
+        infinite: false,
+      });
 
-    window.lenis = lenis;
-    
-    function raf(time) {
-      lenis.raf(time);
+      window.lenis = lenis;
+      
+      function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+      }
       requestAnimationFrame(raf);
+    } catch (error) {
+      console.warn("Lenis initialization failed:", error);
     }
-    requestAnimationFrame(raf);
 
     // Ensure scroll height updates on resize
     const onResize = () => lenis.resize();
@@ -43,8 +48,10 @@ function App() {
 
     return () => {
       window.removeEventListener('resize', onResize);
-      lenis.destroy();
-      window.lenis = null;
+      if (lenis) {
+        lenis.destroy();
+        window.lenis = null;
+      }
     };
   }, []);
 
