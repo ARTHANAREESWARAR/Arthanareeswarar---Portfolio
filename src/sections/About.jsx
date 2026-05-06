@@ -314,37 +314,7 @@ export default function About() {
               }} />
             </div>
 
-            {/* Status badge */}
-            <div style={{
-              position: "absolute",
-              bottom: -16, right: -16,
-              padding: "0.55rem 1rem",
-              background: "rgba(7,8,12,0.98)",
-              border: "1px solid rgba(34,211,238,0.2)",
-              borderRadius: "10px",
-              display: "flex",
-              alignItems: "center",
-              gap: "0.5rem",
-              zIndex: 2,
-              boxShadow: "0 4px 24px rgba(0,0,0,0.4)",
-            }}>
-              <span style={{
-                width: 7, height: 7, borderRadius: "50%",
-                background: "#4ade80",
-                display: "inline-block",
-                boxShadow: "0 0 8px rgba(74,222,128,0.7)",
-                animation: "statusPulse 2s infinite",
-              }} />
-              <span style={{
-                fontFamily: "monospace",
-                fontSize: "0.68rem",
-                color: "rgba(232,234,240,0.8)",
-                letterSpacing: "0.05em",
-                whiteSpace: "nowrap",
-              }}>
-                Open to Opportunities
-              </span>
-            </div>
+
 
             <style>{`
               @keyframes morphBlob {

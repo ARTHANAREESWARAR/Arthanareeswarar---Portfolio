@@ -329,35 +329,7 @@ function ProjectRow({ project, index }) {
             >
               <GitHubIcon /> View Code
             </a>
-            <div style={{ width: 1, height: 16, background: "rgba(255,255,255,0.1)" }} />
-            <a
-              href={project.live}
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                gap: "0.5rem",
-                fontFamily: "monospace",
-                fontSize: "0.72rem",
-                letterSpacing: "0.08em",
-                fontWeight: 600,
-                color: "rgba(232,234,240,0.4)",
-                textDecoration: "none",
-                textTransform: "uppercase",
-                transition: "color 0.2s, gap 0.2s",
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.color = accent;
-                e.currentTarget.style.gap = "0.75rem";
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.color = "rgba(232,234,240,0.4)";
-                e.currentTarget.style.gap = "0.5rem";
-              }}
-            >
-              Live Demo <ArrowIcon />
-            </a>
+
           </div>
         </motion.div>
       </div>
