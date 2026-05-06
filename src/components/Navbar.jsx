@@ -148,20 +148,18 @@ export default function Navbar() {
             transition: "transform 0.6s ease",
           }} className="group-hover:translate-x-[100%]" />
 
-          <span style={{
-            color: "#fff",
-            fontSize: "1rem",
-            fontWeight: 800,
-            fontFamily: "'Plus Jakarta Sans', sans-serif",
-            letterSpacing: "-0.05em",
-            position: "relative",
-            zIndex: 2,
-            display: "flex",
-            alignItems: "center"
-          }}>
-            A
-            <span style={{ color: "#22d3ee", marginLeft: "-1px" }}>R</span>
-          </span>
+          <img 
+            src="./profile-ar.jpg" 
+            alt="AR" 
+            style={{
+              width: "100%",
+              height: "100%",
+              borderRadius: "12px",
+              objectFit: "cover",
+              position: "relative",
+              zIndex: 2,
+            }} 
+          />
 
           {/* Corner accents */}
           <div style={{ position: "absolute", top: 4, left: 4, width: 4, height: 4, borderTop: "1px solid rgba(34,211,238,0.4)", borderLeft: "1px solid rgba(34,211,238,0.4)" }} />

@@ -278,7 +278,7 @@ export default function About() {
               {/* Profile Image */}
               {!imgError ? (
                 <img
-                  src="/profile-ar.jpg"
+                  src="./profile-ar.jpg"
                   alt="Arthanareeswarar"
                   onError={() => setImgError(true)}
                   style={{
