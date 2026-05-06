@@ -33,7 +33,7 @@ export const projects = [
     accent: "#6ee7b7",
     year: "2025",
     featured: true,
-    github: "#",
+    github: "https://github.com/ARTHANAREESWARAR/Career-Path-Predictor",
     live: "#",
   },
   {
@@ -52,7 +52,7 @@ export const projects = [
     accent: "#a78bfa",
     year: "2025",
     featured: false,
-    github: "#",
+    github: "https://github.com/ARTHANAREESWARAR/Face_recognitation",
     live: "#",
   }
 ];
