@@ -17,11 +17,11 @@ const ArrowIcon = () => (
 
 /* ─── Mockup Images ─── */
 const Mockups = {
-  lumen: "/lumen.png",
-  vidyamitra: "/vidyamitra.png",
-  "mern-blog": "/blog.png",
-  "autism-chatbot": "/autism-chatbot.png",
-  "attendance-system": "/attendance-system.jpg",
+  lumen: `${import.meta.env.BASE_URL}lumen.png`,
+  vidyamitra: `${import.meta.env.BASE_URL}vidyamitra.png`,
+  "mern-blog": `${import.meta.env.BASE_URL}blog.png`,
+  "autism-chatbot": `${import.meta.env.BASE_URL}autism-chatbot.png`,
+  "attendance-system": `${import.meta.env.BASE_URL}attendance-system.jpg`,
 };
 
 /* ─── 3D Perspective Mockup Stack ─── */

@@ -149,7 +149,7 @@ export default function Navbar() {
           }} className="group-hover:translate-x-[100%]" />
 
           <img 
-            src="./profile-ar.jpg" 
+            src={`${import.meta.env.BASE_URL}profile-ar.jpg`} 
             alt="AR" 
             style={{
               width: "100%",
